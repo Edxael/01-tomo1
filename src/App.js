@@ -12,7 +12,7 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <p>line1-1</p>
-          <p>line2</p>
+          <p>line2-2</p>
         </header>
       </div>
     );

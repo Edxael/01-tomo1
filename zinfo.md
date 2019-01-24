@@ -31,7 +31,7 @@ Finally the IP addres that you can use to access the app in the web is:
 External endpoints 35.224.140.82:80   <-- This addres is different for each deployment.
 
 
-
+Kubernetes-Engine / Workloads / Edit / set the imagePullPolicy of the container to Always
 
 
 ===============================================================

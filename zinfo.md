@@ -34,6 +34,18 @@ External endpoints 35.224.140.82:80   <-- This addres is different for each depl
 Kubernetes-Engine / Workloads / Edit / set the imagePullPolicy of the container to Always
 
 
+Enabling Google Cloud Build
+https://stephenmann.io/post/continuous-delivery-using-google-kubernetes-engine-and-google-cloud-build/
+
+Once you do that, Cloud Build is enabled, but it cannot access your Kubernetes cluster. You’ll need to give it access. Do this by:
+
+Open your Cloud Console to the “IAM & admin” subsection.
+Click the “IAM” section.
+Click the pencil icon next to the user named “######@cloudbuild.gserviceaccount.com”.
+Select “Add New Role”.
+Find “Kubernetes Engine Admin” and add it.
+Click “Save”
+
 ===============================================================
     EXAMPLE OF YAML FILE IN SERVICES 
 ===============================================================

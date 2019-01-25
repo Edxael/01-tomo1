@@ -31,10 +31,19 @@ Finally the IP addres that you can use to access the app in the web is:
 External endpoints 35.224.140.82:80   <-- This addres is different for each deployment.
 
 
-Kubernetes-Engine / Workloads / Edit / set the imagePullPolicy of the container to Always
+Cretate the cloudbuild.josn file    https://cloud.google.com/cloud-build/docs/configuring-builds/create-basic-configuration
 
 
-Enabling Google Cloud Build
+
+
+
+
+
+--wait:
+  Kubernetes-Engine / Workloads / Edit / set the imagePullPolicy of the container to Always
+
+--wait:
+  Enabling Google Cloud Build
 https://stephenmann.io/post/continuous-delivery-using-google-kubernetes-engine-and-google-cloud-build/
 
 Once you do that, Cloud Build is enabled, but it cannot access your Kubernetes cluster. You’ll need to give it access. Do this by:
@@ -45,6 +54,14 @@ Click the pencil icon next to the user named “######@cloudbuild.gserviceaccoun
 Select “Add New Role”.
 Find “Kubernetes Engine Admin” and add it.
 Click “Save”
+
+
+
+
+
+
+
+
 
 ===============================================================
     EXAMPLE OF YAML FILE IN SERVICES 

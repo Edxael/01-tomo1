@@ -23,7 +23,7 @@
             "set",
             "image",
             "deployment/on25test",
-            "my-container=gcr.io/test-cd-229716/github.com/edxael/01-tomo1"
+            "github-edxael-01-tomo1=gcr.io/test-cd-229716/github.com/edxael/01-tomo1"
         ],
         "env": [
             "CLOUDSDK_COMPUTE_ZONE=us-central1-a",

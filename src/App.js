@@ -11,7 +11,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <p>line: 1.7.5</p>
+          <p>line: 1.7.6/2</p>
         </header>
       </div>
     );

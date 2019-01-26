@@ -29,6 +29,9 @@
                 "CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1"
             ]
         }
+    ],
+    "images": [
+        "gcr.io/test-cd-229716/github.com/edxael/01-tomo1"
     ]
 }
 

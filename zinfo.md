@@ -52,44 +52,42 @@ Click “Save”
   Kubernetes-Engine / Workloads / Edit / set the imagePullPolicy of the container to Always
 
 
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-Video with exmample of how to deploy:
-
-
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-
-
 
 
 ===============================================================
-    EXAMPLE OF YAML FILE IN SERVICES 
+    EXAMPLE OF: cloudbuild.json 
 ===============================================================
-apiVersion: v1
-kind: Service
-metadata:
-  creationTimestamp: 2019-01-24T04:08:46Z
-  labels:
-    app: nginx-1
-  name: nginx-1-service
-  namespace: default
-  resourceVersion: "2218"
-  selfLink: /api/v1/namespaces/default/services/nginx-1-service
-  uid: beef4571-1f8d-11e9-8052-42010a800051
-spec:
-  clusterIP: 10.11.254.148
-  externalTrafficPolicy: Cluster
-  ports:
-  - nodePort: 31991
-    port: 80
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app: nginx-1
-  sessionAffinity: None
-  type: LoadBalancer
-status:
-  loadBalancer:
-    ingress:
-    - ip: 35.224.140.82
-
+{
+    "steps": [
+        {
+            "name": "gcr.io/cloud-builders/docker",
+            "args": [
+                "build",
+                "-t",
+                "gcr.io/test-cd-229716/github.com/edxael/01-tomo1",
+                "."
+            ]
+        },
+        {
+            "name": "gcr.io/cloud-builders/docker",
+            "args": [
+                "push",
+                "gcr.io/test-cd-229716/github.com/edxael/01-tomo1"
+            ]
+        },
+        {
+            "name": "gcr.io/cloud-builders/kubectl",
+            "args": [
+                "set",
+                "image",
+                "deployment/on25test",
+                "github-edxael-01-tomo1=gcr.io/test-cd-229716/github.com/edxael/01-tomo1"
+            ],
+            "env": [
+                "CLOUDSDK_COMPUTE_ZONE=us-central1-a",
+                "CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1"
+            ]
+        }
+    ]
+}
 ===============================================================

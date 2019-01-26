@@ -52,7 +52,11 @@ Click “Save”
   Kubernetes-Engine / Workloads / Edit / set the imagePullPolicy of the container to Always
 
 
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+Video with exmample of how to deploy:
 
+
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 
 
 

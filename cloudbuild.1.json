@@ -5,7 +5,7 @@
       "args": [
         "build",
         "-t",
-        "gcr.io/$PROJECT_ID/$REPO_NAME-$BRANCH_NAME:$REVISION_ID",
+        "gcr.io/test-cd-229716/github.com/edxael/01-tomo1",
         "."
     ],
     "timeout": "500s"
@@ -14,7 +14,7 @@
         "name": "gcr.io/cloud-builders/docker",
         "args": [
             "push",
-            "gcr.io/$PROJECT_ID/$REPO_NAME-$BRANCH_NAME:$REVISION_ID"
+            "gcr.io/test-cd-229716/github.com/edxael/01-tomo1"
         ]
     },
     {
@@ -23,7 +23,7 @@
             "set",
             "image",
             "deployment/on25test",
-            "github-edxael-01-tomo1=gcr.io/$PROJECT_ID/$REPO_NAME-$BRANCH_NAME:$REVISION_ID"
+            "github-edxael-01-tomo1=gcr.io/test-cd-229716/github.com/edxael/01-tomo1"
         ],
         "env": [
             "CLOUDSDK_COMPUTE_ZONE=us-central1-a",
